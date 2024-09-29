@@ -1,0 +1,362 @@
+/* styles.css */
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+b{
+    padding-left: 600px;
+    padding-right: 600px;
+    font-size: 20px;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.logo{
+    align-items: center;
+    background-color: black;
+    height: 50px;
+    width: 50px;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+#home{
+    text-align: center;
+    font-size: 40px;
+    font-style:normal;
+    font-weight: 800;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+}
+.featured-players nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px 80px;
+    display: flexbox;
+    justify-content:center; 
+}
+.featured-players nav ul li{
+    padding: 10px;
+}
+.player-profiles {
+    padding-top: 0px;
+    display: inline-block; /* Allow multiple work-list divs to sit side by side */
+    vertical-align: top;
+    width: 30%;            /* Set each work list to take 30% of the container's width */
+    margin: 1%;            /* Add some space between each work */
+    position: relative;
+    overflow: hidden;      /* Ensures the content stays within the box */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px  grey;
+}
+
+/* Styling for individual work items */
+.players img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+#players .container{
+    text-align: center;
+}
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  grey;
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    transition: all 0.3s ease;
+}
+
+/* Show the layer on hover */
+.players:hover .layer {
+    opacity: 0.80;
+}
+
+/* Layer text styling */
+.layer h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.layer p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Button in the layer */
+.layer a {
+    margin-top: 10px;
+    color:#fff;
+    font-size: 20px;
+    transition: color 0.3s;
+    
+}
+
+.layer a:hover {
+    color: red;
+    background-color: #fff;
+}
+#map-container {
+    text-align: center;
+    height: 700px;
+    width: 1000px;
+    border: 1px solid #ddd;
+}
+#map-container {
+    align-items: center;
+    position: relative;
+    display: inline-block;
+}
+
+#india-map {
+    width:1200px;
+    height: 700px;
+}
+
+.marker {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+#info-box {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 10px;
+    width: 300px;
+    display: inline-block;
+}
+
+#info-box p {
+    font-size: 14px;
+    margin: 0;
+    color: #000;
+}
+
+.marker:hover {
+    background-color: blue;
+}
+
+.marker:hover::after {
+    content: attr(data-player);
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+
+.top-matches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fan-zone-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fan-zone-content form {
+    width: 50%;
+}
+
+.fan-zone-content textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.fan-zone-content button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.fan-zone-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+#top-matches {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    gap: 40px;
+}
+
+.match-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+iframe {
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+.match-info h2 {
+    font-size: 1.5em;
+    color: #444;
+}
+.match-info p{
+    color: black;
+}
+p {
+    font-size: 1em;
+    color:#fff;
+    line-height: 1.6;
+}
+h2{
+    color:white;
+}
+#fan-zone {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#fan-zone h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Fan Zone Content */
+.fan-zone-content h2 {
+    margin-top: 20px;
+    color: #555;
+    font-size: 1.5em;
+}
+
+/* Submit Story Form */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+textarea {
+    resize: none;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    min-height: 100px;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Player Voting List */
+#player-list {
+    list-style: none;
+    padding: 0;
+}
+
+#player-list li {
+    margin-bottom: 10px;
+}
+
+#player-list label {
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Radio Button Styles */
+input[type="radio"] {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Submit Button for Voting */
+#vote-form button {
+    background-color: #007bff;
+    margin-top: 10px;
+}
+
+#vote-form button:hover {
+    background-color: #0056b3;
+}
